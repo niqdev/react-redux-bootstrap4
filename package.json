@@ -2,20 +2,21 @@
   "name": "react-bootstrap4-ghpages",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "homepage": "",
+  "license": "CC-BY-SA-4.0",
+  "author": "niqdev",
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/niqdev/react-bootstrap4-ghpages.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/niqdev/react-bootstrap4-ghpages/issues"
+  "engines": {
+    "node": "6.2.x",
+    "npm": "3.9.x"
   },
-  "homepage": "https://github.com/niqdev/react-bootstrap4-ghpages#readme",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "webpack": "^1.13.1"
   }
