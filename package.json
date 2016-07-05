@@ -15,10 +15,15 @@
     "npm": "3.9.x"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "clean": "rimraf public",
+    "copy": "copyfiles -f favicon.ico ./public",
+    "build": "npm run clean && npm run copy && webpack --config webpack.config.js",
     "start": "npm run build && webpack-dev-server"
   },
   "devDependencies": {
+    "copyfiles": "^1.0.0",
+    "html-webpack-plugin": "^2.22.0",
+    "rimraf": "^2.5.3",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
