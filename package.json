@@ -15,7 +15,7 @@
     "npm": "3.9.x"
   },
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js"
   },
   "devDependencies": {
     "webpack": "^1.13.1"
