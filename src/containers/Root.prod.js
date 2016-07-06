@@ -1,11 +1,17 @@
 import React, { PropTypes } from 'react'
 import { Provider } from 'react-redux'
-import App from './App'
+
+import { Router, useRouterHistory } from 'react-router'
+import { createHashHistory } from 'history'
+
+import routes from '../routes/index'
+
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 
 export default function Root() {
   return (
     <Provider store={this.props.store}>
-      <App />
+      <Router history={appHistory} routes={routes} />
     </Provider>
   )
 }
