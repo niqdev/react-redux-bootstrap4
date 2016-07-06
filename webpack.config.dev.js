@@ -1,8 +1,8 @@
-const path = require('path');
-var webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+const config = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
@@ -15,11 +15,15 @@ module.exports = {
   },
   plugins: [
     /**
-     *
+     * DEVELOPMENT only
      */
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    }),
     /**
-     *
+     * COMMON
      */
     new HtmlWebpackPlugin({
       title: 'react-bootstrap4-ghpages',
@@ -34,10 +38,16 @@ module.exports = {
         loaders: ['react-hot', 'babel'],
         exclude: /node_modules/,
         include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       }
     ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
   }
-};
+}
+
+module.exports = config

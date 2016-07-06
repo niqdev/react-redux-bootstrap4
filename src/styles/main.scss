@@ -1,0 +1,9 @@
+$main-bg-color: #f1f2f0;
+$accent-black: #35342f;
+
+body {
+  background-color: $main-bg-color;
+  color: $accent-black;
+  display: flex;
+  justify-content: center;
+}
