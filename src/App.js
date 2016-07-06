@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react'
 
-export default class App extends Component {
-  render() {
-    return (
-      <p>react-bootstrap4-ghpages</p>
-    );
-  }
+export default function App() {
+  return (
+    <p>react-bootstrap4-ghpages</p>
+  )
 }
