@@ -18,7 +18,7 @@
     "clean": "rimraf public",
     "copy": "copyfiles -f favicon.ico ./public",
     "build": "npm run clean && npm run copy && webpack --config webpack.config.js",
-    "start": "npm run build && node server.js"
+    "start": "npm run clean && node server.js"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",

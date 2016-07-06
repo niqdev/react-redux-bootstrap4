@@ -24,8 +24,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'react-bootstrap4-ghpages',
       filename: 'index.html',
-      template: 'index.template.html',
-      favicon: path.join(__dirname, 'public/favicon.ico')
+      template: 'index.template.html'
     })
   ],
   module: {
