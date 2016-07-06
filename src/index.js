@@ -1,28 +1,12 @@
-import { AppContainer } from 'react-hot-loader'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
 
-const rootEl = document.getElementById('root')
+import configureStore from './store/configureStore'
+import Root from './containers/Root'
+
+const store = configureStore()
+
 ReactDOM.render(
-  <AppContainer>
-    <App />
-  </AppContainer>,
-  rootEl
+  <Root store={store}/>,
+  document.getElementById('root')
 )
-
-if (module.hot) {
-  module.hot.accept('./App', () => {
-
-    /*eslint-disable */
-    const NextApp = require('./App').default
-    /*eslint-enable */
-    
-    ReactDOM.render(
-      <AppContainer>
-        <NextApp />
-      </AppContainer>,
-      rootEl
-    )
-  })
-}
