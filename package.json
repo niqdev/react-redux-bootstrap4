@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap4-ghpages",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
   "homepage": "",
   "license": "CC-BY-SA-4.0",
@@ -9,7 +9,8 @@
     "webpack",
     "react",
     "redux",
-    "redux-devtools"
+    "redux-devtools",
+    "react-router"
   ],
   "repository": {
     "type": "git",
