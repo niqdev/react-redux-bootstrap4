@@ -1,19 +1,26 @@
 const path = require('path');
+var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    './src/index.js'
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './src/index'
   ],
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'app.js'
   },
-  devServer: {
-    contentBase: './public'
-  },
   plugins: [
+    /**
+     *
+     */
+    new webpack.HotModuleReplacementPlugin(),
+    /**
+     *
+     */
     new HtmlWebpackPlugin({
       title: 'react-bootstrap4-ghpages',
       filename: 'index.html',
@@ -22,11 +29,14 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      loader: 'babel'
-    }]
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        loaders: ['babel'],
+        exclude: /node_modules/,
+        include: path.join(__dirname, 'src')
+      }
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
