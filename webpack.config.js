@@ -20,5 +20,15 @@ module.exports = {
       template: 'index.template.html',
       favicon: path.join(__dirname, 'public/favicon.ico')
     })
-  ]
+  ],
+  module: {
+    loaders: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'babel'
+    }]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  }
 };
