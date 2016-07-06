@@ -1,11 +1,16 @@
 {
   "name": "react-bootstrap4-ghpages",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "homepage": "",
   "license": "CC-BY-SA-4.0",
-  "author": "niqdev",
-  "keywords": [],
+  "author": "niqdev (https://github.com/niqdev)",
+  "keywords": [
+    "webpack",
+    "react",
+    "redux",
+    "redux-devtools"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/niqdev/react-bootstrap4-ghpages.git"
