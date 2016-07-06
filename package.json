@@ -19,7 +19,7 @@
     "copy": "copyfiles -f favicon.ico ./public",
     "lint": "eslint src",
     "build": "npm run clean && npm run copy && npm run lint && webpack --config webpack.config.js",
-    "start": "node server.js"
+    "start": "npm run lint && node server.js"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",

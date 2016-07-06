@@ -19,7 +19,9 @@ module.exports = function configureStore(initialState) {
   // hot reload reducers
   if (module.hot) {
     module.hot.accept('../reducers', () =>
+      /*eslint-disable */
       store.replaceReducer(require('../reducers').default)
+      /*eslint-enable */
     )
   }
 

@@ -5,7 +5,7 @@ import DockMonitor from 'redux-devtools-dock-monitor'
 
 const DevTools = createDevTools(
   <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q">
-    <LogMonitor theme="tomorrow"/>
+    <LogMonitor theme="tomorrow" />
   </DockMonitor>
 )
 

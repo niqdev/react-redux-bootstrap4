@@ -7,6 +7,6 @@ import Root from './containers/Root'
 const store = configureStore()
 
 ReactDOM.render(
-  <Root store={store}/>,
+  <Root store={store} />,
   document.getElementById('root')
 )
