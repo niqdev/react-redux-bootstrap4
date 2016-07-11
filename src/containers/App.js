@@ -9,7 +9,7 @@ export function App({ counter, actions, children }) {
   return (
     <div className="container">
       <div className="jumbotron">
-        <h1>react-bootstrap4-ghpages</h1>
+        <h1>react-redux-bootstrap4</h1>
         <Counter counter={counter} actions={actions} />
         <Link to="/gallery">Gallery</Link>
         {children}

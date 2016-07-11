@@ -27,7 +27,7 @@ const config = {
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new HtmlWebpackPlugin({
-      title: 'react-bootstrap4-ghpages',
+      title: 'dev',
       filename: 'index.html',
       template: 'index.template.html'
     }),

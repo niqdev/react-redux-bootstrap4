@@ -30,7 +30,7 @@ const config = {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new HtmlWebpackPlugin({
-      title: 'react-bootstrap4-ghpages',
+      title: 'react-redux-bootstrap4',
       filename: 'index.html',
       template: 'index.template.html',
       favicon: path.join(__dirname, 'public/favicon.ico')
