@@ -18,6 +18,7 @@ export function App({ counter, actions, children }) {
 }
 
 App.propTypes = {
+  children: PropTypes.object.isRequired,
   counter: PropTypes.number.isRequired,
   actions: PropTypes.object.isRequired
 }

@@ -9,7 +9,7 @@ const NotFound = () => <div>NOT FOUND</div>
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Index} />
-    <Route path="/gallery" component={Gallery} />
+    <Route path="gallery" component={Gallery} />
     <Route path="*" component={NotFound} />
   </Route>
 )

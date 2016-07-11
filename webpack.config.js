@@ -3,39 +3,42 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
     './src/index'
   ],
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'app.js'
+    filename: 'app-[hash].min.js'
   },
   plugins: [
     /**
-     * DEVELOPMENT
+     * PRODUCTION
      */
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    }),
     /**
      * COMMON
      */
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new HtmlWebpackPlugin({
       title: 'react-bootstrap4-ghpages',
       filename: 'index.html',
-      template: 'index.template.html'
+      template: 'index.template.html',
+      favicon: path.join(__dirname, 'public/favicon.ico')
     })
   ],
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel'],
+        loaders: ['babel'],
         exclude: /node_modules/,
         include: path.join(__dirname, 'src')
       },
