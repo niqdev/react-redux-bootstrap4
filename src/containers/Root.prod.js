@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { Router, useRouterHistory } from 'react-router'
 import { createHashHistory } from 'history'
 
-import routes from '../routes/index'
+import routes from '../router/routes'
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 
