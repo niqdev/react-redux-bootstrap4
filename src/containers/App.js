@@ -7,11 +7,13 @@ import * as CounterActions from '../actions/CounterActions'
 
 export function App({ counter, actions, children }) {
   return (
-    <div>
-      <div>react-bootstrap4-ghpages</div>
-      <Counter counter={counter} actions={actions} />
-      <Link to="/gallery">Gallery</Link>
-      {children}
+    <div className="container">
+      <div className="jumbotron">
+        <h1>react-bootstrap4-ghpages</h1>
+        <Counter counter={counter} actions={actions} />
+        <Link to="/gallery">Gallery</Link>
+        {children}
+      </div>
     </div>
   )
 }

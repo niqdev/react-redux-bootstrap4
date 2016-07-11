@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 
 const config = {
@@ -33,7 +34,8 @@ const config = {
       filename: 'index.html',
       template: 'index.template.html',
       favicon: path.join(__dirname, 'public/favicon.ico')
-    })
+    }),
+    new ExtractTextPlugin('style-[hash].css')
   ],
   module: {
     loaders: [
@@ -46,11 +48,18 @@ const config = {
       {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass', 'postcss']
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader')
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    alias: {
+      'bootstrap-css': path.join(__dirname, 'node_modules/bootstrap/dist/css/bootstrap.min.css')
+    }
   },
   postcss: [
     autoprefixer({ browsers: ['last 2 versions'] })

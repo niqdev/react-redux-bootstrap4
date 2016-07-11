@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import './counter.scss'
 
 export default class Counter extends Component {
 
@@ -13,12 +14,12 @@ export default class Counter extends Component {
   render() {
     return (
       <div>
-        <div>{this.props.counter}</div>
+        <div className="my-counter">{this.props.counter}</div>
         <div>{this.props.counter % 2 === 0 ? 'even' : 'odd'}</div>
         <br />
         <div>
-          <button onClick={() => { this.handleDecrement() }}>-</button>
-          <button onClick={() => { this.handleIncrement() }}>+</button>
+          <button className="btn btn-primary" onClick={() => { this.handleDecrement() }}>-</button>
+          <button className="btn btn-success" onClick={() => { this.handleIncrement() }}>+</button>
         </div>
       </div>
     )

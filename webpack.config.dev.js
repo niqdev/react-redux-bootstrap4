@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const config = {
   devtool: 'cheap-module-eval-source-map',
@@ -29,7 +30,8 @@ const config = {
       title: 'react-bootstrap4-ghpages',
       filename: 'index.html',
       template: 'index.template.html'
-    })
+    }),
+    new ExtractTextPlugin('style.css')
   ],
   module: {
     loaders: [
@@ -42,11 +44,18 @@ const config = {
       {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader')
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    alias: {
+      'bootstrap-css': path.join(__dirname, 'node_modules/bootstrap/dist/css/bootstrap.css')
+    }
   }
 }
 
