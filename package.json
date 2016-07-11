@@ -1,8 +1,8 @@
 {
-  "name": "react-bootstrap4-ghpages",
+  "name": "react-redux-bootstrap4",
   "version": "0.4.0",
   "description": "",
-  "homepage": "",
+  "homepage": "https://niqdev.github.io/react-redux-bootstrap4",
   "license": "CC-BY-SA-4.0",
   "author": "niqdev (https://github.com/niqdev)",
   "keywords": [
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niqdev/react-bootstrap4-ghpages.git"
+    "url": "git+https://github.com/niqdev/react-redux-bootstrap4.git"
   },
   "engines": {
     "node": "6.2.x",
@@ -27,7 +27,8 @@
     "lint": "eslint src",
     "init": "npm run clean && npm run copy",
     "build": "npm run lint && npm run init && webpack --config webpack.config.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "publish": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",

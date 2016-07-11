@@ -1,4 +1,4 @@
-# react-bootstrap4-ghpages
+# react-redux-bootstrap4
 
 > work in progress!
 
