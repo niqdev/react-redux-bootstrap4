@@ -2,9 +2,8 @@ import React, { PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
-
-import * as CounterActions from '../actions/CounterActions'
 import { Counter } from '../components'
+import * as CounterActions from '../actions/CounterActions'
 
 export function App({ counter, actions, children }) {
   return (

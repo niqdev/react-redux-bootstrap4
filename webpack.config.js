@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const autoprefixer = require('autoprefixer')
 
 const config = {
   devtool: 'source-map',
@@ -44,13 +45,16 @@ const config = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style', 'css', 'sass', 'postcss']
       }
     ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
-  }
+  },
+  postcss: [
+    autoprefixer({ browsers: ['last 2 versions'] })
+  ]
 }
 
 module.exports = config
