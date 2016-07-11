@@ -1,4 +1,4 @@
-# react-redux-bootstrap4
+# react-redux-bootstrap4 boilerplate
 
 > work in progress!
 
@@ -10,3 +10,18 @@
 * [react-intl](https://github.com/yahoo/react-intl)
 * [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
 * [gh-pages](https://pages.github.com/)
+
+### Run
+```bash
+# first time
+npm install
+
+# run development
+npm start
+
+# build static
+npm run build
+
+# build and publish gh-pages
+npm run publish
+```
