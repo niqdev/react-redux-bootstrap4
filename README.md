@@ -1,6 +1,8 @@
-# react-redux-bootstrap4 boilerplate
+# react-redux-bootstrap4
 
 > work in progress!
+
+Just another boilerplate:
 
 * [webpack](https://webpack.github.io/)
 * [react](https://facebook.github.io/react/)
@@ -19,9 +21,9 @@ npm install
 # run development
 npm start
 
-# build static
+# build static site
 npm run build
 
-# build and publish gh-pages
+# publish gh-pages
 npm run publish
 ```

@@ -28,7 +28,7 @@
     "init": "npm run clean && npm run copy",
     "build": "npm run lint && npm run init && webpack --config webpack.config.js",
     "start": "node server.js",
-    "publish": "npm run build && git subtree push --prefix public origin gh-pages"
+    "publish": "git subtree push --prefix public origin gh-pages"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
