@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { IntlProvider } from 'react-intl-redux'
 import { Router, useRouterHistory } from 'react-router'
 import { createHashHistory } from 'history'
-import routes from '../router/routes'
+import routes from '../routes'
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
 

@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react'
 import { Provider } from 'react-redux'
 import { IntlProvider } from 'react-intl-redux'
 import { Router, browserHistory } from 'react-router'
-import routes from '../router/routes'
-import DevTools from './DevTools'
+import routes from '../routes'
+import DevTools from '../DevTools'
 
 export default function Root({ store }) {
   return (

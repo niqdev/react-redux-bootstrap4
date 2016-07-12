@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
-import App from '../containers/App'
+import App from './App'
 
 const Index = () => <div>INDEX</div>
 const Gallery = () => <div>GALLERY</div>

@@ -1,4 +1,4 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../constants/ActionTypes'
+import { INCREMENT_COUNTER, DECREMENT_COUNTER } from './CounterActionTypes'
 
 export function increment() {
   return {
