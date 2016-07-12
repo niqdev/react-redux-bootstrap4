@@ -8,6 +8,7 @@ export default function App({ children }) {
         <h1>react-redux-bootstrap4</h1>
         <Link to="/gallery">Gallery</Link>
         <Link to="/counter">Counter</Link>
+        <Link to="/intl">Intl</Link>
         {children}
       </div>
     </div>

@@ -1,5 +1,5 @@
 {
-  "locale": "it",
+  "language": "it",
   "label": "Italiano",
   "messages": {
     "home.myId": "myDescriptionIt"
