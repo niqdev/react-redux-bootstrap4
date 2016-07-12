@@ -48,6 +48,11 @@ const config = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader')
+      },
+      {
+        test: /\.json$/,
+        exclude: /node_modules/,
+        loader: 'json'
       }
     ]
   },
