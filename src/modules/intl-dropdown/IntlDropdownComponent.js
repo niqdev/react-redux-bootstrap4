@@ -13,18 +13,19 @@ export default class IntlDropdown extends Component {
     this.onChangeLanguage = this.onChangeLanguage.bind(this)
   }
 
-  toggleDropdown() {
-    this.setState({ isOpen: !this.state.isOpen })
-  }
-
   onChangeLanguage(language) {
     this.props.onChange(language)
     this.toggleDropdown()
   }
 
+  toggleDropdown() {
+    this.setState({ isOpen: !this.state.isOpen })
+  }
+
   render() {
-    const dropdownClasses = classNames('dropdown', { 'open': this.state.isOpen })
-    const buttonClasses = classNames('btn', 'btn-secondary', 'dropdown-toggle', { 'active': this.state.isOpen })
+    const dropdownClasses = classNames('dropdown', { open: this.state.isOpen })
+    const buttonClasses = classNames(
+      'btn', 'btn-secondary', 'dropdown-toggle', { active: this.state.isOpen })
     const buttonAriaExpanded = this.state.isOpen
     const { value, locales } = this.props
 
@@ -38,7 +39,7 @@ export default class IntlDropdown extends Component {
             aria-haspopup="true"
             aria-expanded={buttonAriaExpanded}
             onClick={this.toggleDropdown}>
-            Dropdown
+            Language
           </button>
           <div className="dropdown-menu" aria-labelledby="dropdownMenu">
             {locales.map(locale =>
@@ -47,13 +48,13 @@ export default class IntlDropdown extends Component {
                 type="button"
                 key={locale.language}
                 onClick={() => this.onChangeLanguage(locale.language)}>
-                {locale.label}
+                  {locale.label}
               </button>
             )}
           </div>
         </div>
         <div>{value}</div>
-        <FormattedMessage id="home.myId" defaultMessage="myDefaultMessage"/>
+        <FormattedMessage id="home.myId" defaultMessage="myDefaultMessage" />
       </div>
     )
   }
