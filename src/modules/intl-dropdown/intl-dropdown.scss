@@ -1,0 +1,17 @@
+.intl-dropdown {
+  .dropdown {
+    // remove caret
+    .dropdown-toggle::after {
+      display: none;
+    }
+    // remove blue border
+    .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+      outline: none;
+    }
+  }
+  .dropdown-menu {
+    left: inherit;
+    right: 0;
+    text-align: center;
+  }
+}

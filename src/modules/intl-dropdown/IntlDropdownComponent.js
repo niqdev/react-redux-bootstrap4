@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
+import './intl-dropdown.scss'
 
 export default class IntlDropdown extends Component {
 
@@ -30,7 +30,7 @@ export default class IntlDropdown extends Component {
     const { value, locales } = this.props
 
     return (
-      <div>
+      <div className="intl-dropdown">
         <div className={dropdownClasses}>
           <button
             className={buttonClasses}
@@ -39,7 +39,7 @@ export default class IntlDropdown extends Component {
             aria-haspopup="true"
             aria-expanded={buttonAriaExpanded}
             onClick={this.toggleDropdown}>
-            Language
+            {value}
           </button>
           <div className="dropdown-menu" aria-labelledby="dropdownMenu">
             {locales.map(locale =>
@@ -48,13 +48,11 @@ export default class IntlDropdown extends Component {
                 type="button"
                 key={locale.language}
                 onClick={() => this.onChangeLanguage(locale.language)}>
-                  {locale.label}
+                {locale.label}
               </button>
             )}
           </div>
         </div>
-        <div>{value}</div>
-        <FormattedMessage id="home.myId" defaultMessage="myDefaultMessage" />
       </div>
     )
   }
