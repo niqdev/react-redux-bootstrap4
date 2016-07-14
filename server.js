@@ -5,7 +5,7 @@ const open = require('open');
 
 const server = new WebpackDevServer(webpack(config), {
   contentBase: config.output.path,
-  //publicPath: config.output.publicPath,
+  publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true,
   stats: {

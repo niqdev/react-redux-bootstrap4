@@ -4,15 +4,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const config = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval',
   entry: [
+    'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     './src/index'
   ],
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'app.js'
+    filename: 'app.js',
+    publicPath: '/'
   },
   plugins: [
     /**
@@ -37,7 +39,7 @@ const config = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel'],
+        loaders: ['babel'],
         exclude: /node_modules/,
         include: path.join(__dirname, 'src')
       },
