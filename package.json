@@ -10,9 +10,10 @@
     "react",
     "redux",
     "redux-devtools",
+    "react-hot-loader",
     "react-router",
     "react-intl",
-    "bootstrap"
+    "bootstrap 4"
   ],
   "repository": {
     "type": "git",

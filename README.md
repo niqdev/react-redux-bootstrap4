@@ -8,9 +8,10 @@ Just another boilerplate:
 * [react](https://facebook.github.io/react)
 * [redux](http://redux.js.org)
 * [redux-devtools](https://github.com/gaearon/redux-devtools)
+* [react-hot-loader](https://github.com/gaearon/react-hot-loader)
 * [react-router](https://github.com/reactjs/react-router)
 * [react-intl](https://github.com/yahoo/react-intl)
-* [redux-form](http://redux-form.com)
+* [redux-form](http://redux-form.com) TODO
 * [Bootstrap 4](http://v4-alpha.getbootstrap.com)
 * [gh-pages](https://pages.github.com)
 
