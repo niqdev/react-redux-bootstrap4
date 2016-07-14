@@ -15,7 +15,7 @@ export function IntlDropdown({ locale, onChangeIntl }) {
 
 IntlDropdown.propTypes = {
   value: PropTypes.string,
-  locale: PropTypes.object.isRequired,
+  locale: PropTypes.string.isRequired,
   onChangeIntl: PropTypes.func.isRequired
 }
 

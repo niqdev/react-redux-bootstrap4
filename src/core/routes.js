@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
-import App from './App'
-import { Counter, IntlDropdown } from '../modules'
+import { App, Counter, IntlDropdown } from '../modules'
 
 const Index = () => <div>INDEX</div>
 const Gallery = () => <div>GALLERY</div>
