@@ -4,6 +4,8 @@
   "messages": {
     "navbar.home": "Home",
     "navbar.counter": "Redux example",
-    "home.myId": "myDescriptionEn"
+    "home.source": "Source on GitHub",
+    "counter.even": "Even",
+    "counter.odd": "Odd"
   }
 }
