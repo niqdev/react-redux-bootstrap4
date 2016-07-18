@@ -9,9 +9,6 @@ export default function NavbarComponent() {
       <Link to="/" className="navbar-brand"><FormattedMessage id="navbar.home" /></Link>
       <ul className="nav navbar-nav">
         <li className="nav-item">
-          <Link to="/gallery" className="nav-link"><FormattedMessage id="navbar.gallery" /></Link>
-        </li>
-        <li className="nav-item">
           <Link to="/counter" className="nav-link"><FormattedMessage id="navbar.counter" /></Link>
         </li>
         <li className="nav-item pull-xs-right">

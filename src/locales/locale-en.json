@@ -3,7 +3,6 @@
   "label": "English",
   "messages": {
     "navbar.home": "Home",
-    "navbar.gallery": "Gallery",
     "navbar.counter": "Redux example",
     "home.myId": "myDescriptionEn"
   }
