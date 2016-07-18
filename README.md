@@ -19,24 +19,24 @@ Directory structure:
 ```
 public/ <-- your static generated app is here
 src/
-├── core
+├── core/
 │   ├── DevTools.js *
 │   ├── reducers.js <-- combine your reducers
-│   ├── root *
+│   ├── root/ *
 │   ├── routes.js <-- change your routes
 │   ├── storage.js *
-│   └── store *
+│   └── store/ *
 ├── index.js
-├── locales <-- all your translations
+├── locales/ <-- all your translations
 │   ├── index.js
 │   ├── locale-en.json
 │   └── locale-it.json
-└── modules <-- all your isolated component should go here
+└── modules/ <-- all your isolated component should go here
     ├── index.js
-    ├── app <-- main component
+    ├── app/ <-- main component
     │   ├── AppComponent.js
     │   └── app.scss
-    ├── counter <-- example of component with redux
+    ├── counter/ <-- example of component with redux
     │   ├── CounterActionTypes.js
     │   ├── CounterActions.js
     │   ├── CounterComponent.js
@@ -46,7 +46,7 @@ src/
     └
     ...
 
-* Generally you shouldn't modify this unless is needed
+* Generally you shouldn't modify this unless needed
 ```
 
 ### Run
