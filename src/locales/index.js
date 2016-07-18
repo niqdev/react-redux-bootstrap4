@@ -5,10 +5,12 @@ import localeIt from './locale-it.json'
 
 const DEFAULT_LOCALE = 'defaultLocale'
 
+/*eslint-disable */
 const localesMap = Immutable.Map({
   en: localeEn,
   it: localeIt
 })
+/*eslint-enable */
 
 /**
  *
@@ -21,10 +23,10 @@ export const locales = localesMap.valueSeq().toArray()
 export function getDefault() {
   const locale = getLocaleStorage(DEFAULT_LOCALE)
   if (localesMap.has(locale)) {
-    //console.log(`Found locale: ${locale}`)
+    // console.log(`Found locale: ${locale}`)
     return localesMap.get(locale)
   }
-  //console.log('Use default en locale')
+  // console.log('Use default en locale')
   return localeEn
 }
 

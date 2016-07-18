@@ -6,7 +6,7 @@ import en from 'react-intl/locale-data/en'
 import it from 'react-intl/locale-data/it'
 import configureStore from './core/store'
 import Root from './core/root'
-import { getDefault as getDefaultLocale} from './locales'
+import { getDefault as getDefaultLocale } from './locales'
 
 /*eslint-disable */
 import 'bootstrap-css'
@@ -22,7 +22,7 @@ const initialState = Object.assign({}, {
   }
 })
 
-const store = configureStore(initialState);
+const store = configureStore(initialState)
 const rootEl = document.getElementById('root')
 
 ReactDOM.render(
@@ -39,7 +39,7 @@ if (module.hot) {
     /*eslint-enable */
     ReactDOM.render(
       <AppContainer>
-        <NextRoot store={store}/>
+        <NextRoot store={store} />
       </AppContainer>,
       rootEl
     )
