@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { update as updateIntl } from 'react-intl-redux'
 import IntlDropdownComponent from './IntlDropdownComponent'
-import locales from '../../locales'
+import { locales, setDefault as setDefaultLocale } from '../../locales'
 
 export function IntlDropdown({ locale, onChangeIntl }) {
   return (
@@ -32,10 +32,13 @@ const getMessages = (language) => {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onChangeIntl: (language) => dispatch(updateIntl({
-      locale: language,
-      messages: getMessages(language)
-    }))
+    onChangeIntl: (language) => {
+      setDefaultLocale(language)
+      dispatch(updateIntl({
+        locale: language,
+        messages: getMessages(language)
+      }))
+    }
   }
 }
 
