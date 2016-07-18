@@ -1,7 +1,5 @@
 # react-redux-bootstrap4
 
-> work in progress!
-
 Just another boilerplate:
 
 * [webpack](https://webpack.github.io)
