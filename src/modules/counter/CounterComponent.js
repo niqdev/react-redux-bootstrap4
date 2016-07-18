@@ -4,17 +4,17 @@ import './counter.scss'
 
 export default class Counter extends Component {
 
+  getMessage() {
+    return this.props.counter % 2 === 0 ? <FormattedMessage id="counter.even" /> :
+      <FormattedMessage id="counter.odd" />
+  }
+
   handleIncrement() {
     this.props.actions.increment()
   }
 
   handleDecrement() {
     this.props.actions.decrement()
-  }
-
-  getMessage() {
-    return this.props.counter % 2 === 0 ? <FormattedMessage id="counter.even" /> :
-      <FormattedMessage id="counter.odd" />
   }
 
   render() {
