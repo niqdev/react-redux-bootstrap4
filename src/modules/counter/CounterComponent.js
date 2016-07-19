@@ -21,8 +21,8 @@ export default class Counter extends Component {
     return (
       <div className="my-counter center-block">
         <div className="row m-b-2">
-          <div className="col-xs-6">{this.props.counter}</div>
-          <div className="col-xs-6 counter-label">{this.getMessage()}</div>
+          <div className="col-sm-6">{this.props.counter}</div>
+          <div className="col-sm-6 counter-label">{this.getMessage()}</div>
         </div>
         <div className="row center-block">
           <div className="col-xs-6">

@@ -1,3 +1,9 @@
 body {
   min-height: 75rem;
+
+  // remove blue border
+  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus,
+  .btn.active:focus, .btn.active.focus, button.dropdown-item:focus {
+    outline: none;
+  }
 }

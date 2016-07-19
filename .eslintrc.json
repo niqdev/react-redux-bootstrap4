@@ -2,15 +2,7 @@
   "extends": "airbnb",
   "rules": {
     "comma-dangle": 0,
-    "semi": [
-      2,
-      "never"
-    ],
-    "react/jsx-closing-bracket-location": [
-      2,
-      {
-        "location": "after-props"
-      }
-    ]
+    "semi": [ 2, "never" ],
+    "react/jsx-closing-bracket-location": [ 2, { "location": "after-props" } ]
   }
 }
