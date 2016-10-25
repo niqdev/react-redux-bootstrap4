@@ -68,7 +68,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5",
     "classnames": "^2.2.5",
-    "history": "^4.3.0",
+    "history": "^2.1.2",
     "immutable": "^3.8.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
