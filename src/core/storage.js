@@ -1,3 +1,5 @@
+/* global window */
+
 export function put(key, value) {
   window.localStorage.setItem(key, value)
 }
