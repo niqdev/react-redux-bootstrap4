@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "boilerplate",
   "homepage": "https://niqdev.github.io/react-redux-bootstrap4",
-  "license": "CC-BY-SA-4.0",
+  "license": "MIT",
   "author": "niqdev (https://github.com/niqdev)",
   "keywords": [
     "webpack",
