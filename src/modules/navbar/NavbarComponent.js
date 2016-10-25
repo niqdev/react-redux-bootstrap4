@@ -5,13 +5,13 @@ import IntlDropdown from '../intl-dropdown/IntlDropdownContainer'
 
 export default function NavbarComponent() {
   return (
-    <nav className="navbar navbar-static-top navbar-light bg-faded m-b-1">
+    <nav className="navbar navbar-static-top navbar-light bg-faded mb-1">
       <Link to="/" className="navbar-brand"><FormattedMessage id="navbar.home" /></Link>
       <ul className="nav navbar-nav">
         <li className="nav-item">
           <Link to="/counter" className="nav-link"><FormattedMessage id="navbar.counter" /></Link>
         </li>
-        <li className="nav-item pull-xs-right">
+        <li className="nav-item float-xs-right">
           <IntlDropdown />
         </li>
       </ul>

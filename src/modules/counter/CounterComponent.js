@@ -20,20 +20,20 @@ export default class Counter extends Component {
   render() {
     return (
       <div className="my-counter center-block">
-        <div className="row m-b-2">
+        <div className="row mb-2">
           <div className="col-sm-6">{this.props.counter}</div>
           <div className="col-sm-6 counter-label">{this.getMessage()}</div>
         </div>
         <div className="row center-block">
           <div className="col-xs-6">
             <button
-              className="btn btn-primary-outline btn-block"
+              className="btn btn-outline-primary btn-block"
               onClick={() => this.handleDecrement()}>-
             </button>
           </div>
           <div className="col-xs-6">
             <button
-              className="btn btn-success-outline btn-block"
+              className="btn btn-outline-success btn-block"
               onClick={() => this.handleIncrement()}>+
             </button>
           </div>

@@ -6,7 +6,7 @@ export default function HomeComponent() {
     <div className="jumbotron">
       <h1 className="display-4">Boilerplate</h1>
       <p className="lead">react-redux-bootstrap4</p>
-      <hr className="m-y-2" />
+      <hr className="my-2" />
       <p className="lead">
         <a
           className="btn btn-primary btn-lg"
