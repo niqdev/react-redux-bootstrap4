@@ -47,7 +47,7 @@ src/
 * Generally you shouldn't modify this unless needed
 ```
 
-### Run
+### Useful commands
 ```bash
 # first time
 npm install
@@ -60,4 +60,10 @@ npm run build
 
 # publish gh-pages
 npm run publish
+
+# build image
+docker build -t rrb4:v1 .
+
+# run container
+docker run -d -p 80:80 rrb4:v1
 ```
